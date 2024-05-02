@@ -21,6 +21,7 @@ public class Category implements Serializable {
     private String id;
     private String name;
     private int type;
+    private String image;
     private String created;
     private String updated;
 

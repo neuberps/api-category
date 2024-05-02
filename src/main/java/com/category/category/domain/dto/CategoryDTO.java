@@ -4,6 +4,7 @@ import com.category.category.domain.entity.Category;
 import com.category.category.domain.entity.TypeCategory;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,6 +26,9 @@ public class CategoryDTO implements Serializable {
     @Valid
     private int type;
 
+    @NotNull
+    private String image;
+
     private String created;
     private String updated;
 
@@ -32,5 +36,4 @@ public class CategoryDTO implements Serializable {
         BeanUtils.copyProperties(category, this);
     }
 
-   // public CategoryDTO(TypeCategory typeCategory) {}
 }
